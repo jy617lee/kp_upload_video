@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Brush Monsters 테스트 동영상</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="//fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page-header">
+  <h1>Brush Monsters 테스트</h1>
+  <h3>테스트에 참가해주셔서 감사합니다. 3회 촬영한 동영상을 올려주세요</h3>
+
+  {% block content %}
+  <form method="POST" enctype="multipart/form-data">
+  {%csrf_token%} {{form.as_p}}
+  <button type="submit" class="save btn btn-default">Upload</button>
+  </form>
+  {% endblock %}
+</body>
+</html>
