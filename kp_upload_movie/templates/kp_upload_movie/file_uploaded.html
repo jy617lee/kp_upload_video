@@ -10,11 +10,11 @@
 
 <body>
   <div class="page-header">
-  <h1>파일 업로드 완료</h1>
+  <h3>파일 업로드 완료</h3>
 
   {% for movie in movies%}
   <h3>{{movie.username}}  {{movie.update_time}} </h3>
-  <video width="320" height="240" controls>
+  <video class="embed-responsive embed-responsive-4by3">
     <source src="{{movie.movie.url}}" type="video/mp4"></source>
   </video>
 </video>

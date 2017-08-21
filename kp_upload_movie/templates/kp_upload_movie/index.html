@@ -9,14 +9,17 @@
 </head>
 
 <body>
-  <div class="page-header">
-  <h1>Brush Monsters 테스트</h1>
-  <h3>테스트에 참가해주셔서 감사합니다. 3회 촬영한 동영상을 올려주세요</h3>
+  <div class="page-header col-xs-12 col-sm-12 col-md-8 col-lg-8">
+  <h3>Brush Monsters</h3>
+  <h6>2주간 테스트에 성실히 참여해주셔서 감사합니다. 주신 피드백이 향후 제품의 방향을 설정하는데 큰 도움이 되었습니다.
+    인터뷰 전 3회동안 양치를 촬영한 동영상을 올려주세요.</h6>
+
+</br>
 
   {% block content %}
   <form method="POST" enctype="multipart/form-data">
   {%csrf_token%} {{form.as_p}}
-  <button type="submit" class="save btn btn-default">Upload</button>
+  <button type="submit" class="btn btn-default">업로드하기</button>
   </form>
   {% endblock %}
 </body>
