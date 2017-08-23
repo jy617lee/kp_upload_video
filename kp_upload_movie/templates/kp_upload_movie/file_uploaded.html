@@ -21,12 +21,15 @@
     </form>
   </div>
 
+</br>
   {% for movie in movies%}
   <div>
-    <h3> {{movie.username}}  {{movie.update_time}} </h3>
-    <video width="320" height="240" margin-left="auto" margin-right="auto">
-      <source src="{{movie.movie.url}}" type="video/mp4"></source>
-    </video>
+    <h3 class="center"> {{movie.username}}  {{movie.update_time}} </h3>
+    <div class="video" >
+      <video width="320px" height="240px" controls>
+        <source src="{{movie.movie.url}}" type="video/mp4"></source>
+      </video>
+    </div>
   </div>
   {% endfor %}
 </body>
