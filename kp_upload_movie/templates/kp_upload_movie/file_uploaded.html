@@ -22,9 +22,9 @@
 </div>
 
   {% for movie in movies%}
-  <div class="col-xs-11 col-sm-11">
+  <div>
   <h3> {{movie.username}}  {{movie.update_time}} </h3>
-  <video>
+  <video width="320" height="240" margin-left="auto" margin-right="auto">
     <source src="{{movie.movie.url}}" type="video/mp4"></source>
   </video>
 </div>
