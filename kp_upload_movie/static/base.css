@@ -29,6 +29,7 @@ h3 {
 
 .save {
     float: right;
+    margin-bottom: 15px
 }
 
 .post-form textarea, .post-form input {

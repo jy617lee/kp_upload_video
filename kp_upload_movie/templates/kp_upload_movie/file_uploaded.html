@@ -12,21 +12,22 @@
 
 <body>
   <div class="page-header col-xs-12 col-sm-12 col-md-8 col-lg-8">
-  <h3 class="top-menu">Thank you</h3>
+    <h3 class="top-menu">Thank you</h3>
   </div>
   <div>
     <form class="post-form content" method="POST" enctype="multipart/form-data">
     {%csrf_token%} {{form.as_p}}
-    <button type="submit" class="save btn btn-default">업로드하기</button>
+    <button type="submit" class="save btn btn-default col-xs-12 col-sm-12">업로드하기</button>
     </form>
-</div>
+  </div>
 
   {% for movie in movies%}
   <div>
-  <h3> {{movie.username}}  {{movie.update_time}} </h3>
-  <video width="320" height="240" margin-left="auto" margin-right="auto">
-    <source src="{{movie.movie.url}}" type="video/mp4"></source>
-  </video>
-</div>
+    <h3> {{movie.username}}  {{movie.update_time}} </h3>
+    <video width="320" height="240" margin-left="auto" margin-right="auto">
+      <source src="{{movie.movie.url}}" type="video/mp4"></source>
+    </video>
+  </div>
   {% endfor %}
+</body>
 </html>
