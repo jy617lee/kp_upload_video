@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -6,17 +7,26 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   <link href="//fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'base.css' %}">
 </head>
 
 <body>
-  <div class="page-header">
-  <h3>파일 업로드 완료</h3>
+  <div class="page-header col-xs-12 col-sm-12 col-md-8 col-lg-8">
+  <h3 class="top-menu">Thank you</h3>
+  </div>
+  <div>
+    <form class="post-form content" method="POST" enctype="multipart/form-data">
+    {%csrf_token%} {{form.as_p}}
+    <button type="submit" class="save btn btn-default">업로드하기</button>
+    </form>
+</div>
 
   {% for movie in movies%}
-  <h3>{{movie.username}}  {{movie.update_time}} </h3>
-  <video class="embed-responsive embed-responsive-4by3">
+  <div class="col-xs-11 col-sm-11">
+  <h3> {{movie.username}}  {{movie.update_time}} </h3>
+  <video ">
     <source src="{{movie.movie.url}}" type="video/mp4"></source>
   </video>
-</video>
+</div>
   {% endfor %}
 </html>
